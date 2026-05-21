@@ -5,7 +5,7 @@ import { blogAPI } from '../admin/services/api';
 const breadcrumbHtml = `
 \t<div class="header-breadcamb-fixer">\t\t<div data-elementor-type="wp-post" data-elementor-id="10514" class="elementor elementor-10514">
 \t\t\t\t\t
-\t\t<div class="default no-position show_shadow rs-sticky-default elementor-element elementor-element-41335a8 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="41335a8" data-element_type="container" data-e-type="container" data-settings="{\&quot;background_background\&quot;:\&quot;classic\&quot;}">
+\t\t<div class="default no-position show_shadow rs-sticky-default elementor-element elementor-element-41335a8 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="41335a8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 \t\t\t\t\t<div class="e-con-inner">
 \t\t
 \t\t<div class="default no-position show_shadow rs-sticky-default elementor-element elementor-element-5e42932 e-flex e-con-boxed e-con e-child" data-id="5e42932" data-element_type="container" data-e-type="container">
