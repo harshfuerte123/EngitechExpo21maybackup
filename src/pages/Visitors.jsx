@@ -1,6 +1,49 @@
+import { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import { formAPI } from '../admin/services/api';
 
 export default function Visitors() {
+  const [formStatus, setFormStatus] = useState('idle');
+  const [formMessage, setFormMessage] = useState('');
+
+  useEffect(() => {
+    const form = document.getElementById('visitor-reg-form');
+    if (!form) return;
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      const formEl = e.currentTarget;
+      const data = new FormData(formEl);
+
+      const name = (data.get('your-name') || '').trim();
+      const email = (data.get('your-email') || '').trim();
+      const contactNumber = (data.get('your-contact-number') || '').trim();
+      const companyName = (data.get('company-name') || '').trim();
+      const message = (data.get('your-message') || '').trim();
+
+      if (!name || !email || !contactNumber || !companyName) {
+        setFormMessage('Please fill all required fields.');
+        setFormStatus('error');
+        return;
+      }
+
+      setFormStatus('submitting');
+      setFormMessage('');
+
+      try {
+        await formAPI.submitVisitor({ name, email, contactNumber, companyName, message });
+        setFormStatus('success');
+        setFormMessage('Registration submitted successfully! We will contact you soon.');
+        formEl.reset();
+      } catch (err) {
+        setFormStatus('error');
+        setFormMessage(err?.response?.data?.message || 'Submission failed. Please try again.');
+      }
+    };
+
+    form.addEventListener('submit', handleSubmit);
+    return () => form.removeEventListener('submit', handleSubmit);
+  }, []);
   return (
     <Layout
       pageCss={[{ id: 'page-css-visitors', href: '/css/page-visitors.css' }]}
@@ -161,29 +204,25 @@ and technologies. 								</div>
 				<div class="elementor-element elementor-element-66e5a73 elementor-widget elementor-widget-rs-cf7" data-id="66e5a73" data-element_type="widget" data-e-type="widget" data-widget_type="rs-cf7.default">
 				<div class="elementor-widget-container">
 					
-<div class="wpcf7 js" id="wpcf7-f16-p31012-o1" lang="en-US" dir="ltr" data-wpcf7-id="16">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="https://engitechexpo.com/visitors/#wpcf7-f16-p31012-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
-<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="16"><input type="hidden" name="_wpcf7_version" value="6.1.5"><input type="hidden" name="_wpcf7_locale" value="en_US"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f16-p31012-o1"><input type="hidden" name="_wpcf7_container_post" value="31012"><input type="hidden" name="_wpcf7_posted_data_hash" value="">
-</fieldset>
+<div class="wpcf7 js" id="wpcf7-f16-p31012-o1" lang="en-US" dir="ltr">
+<form id="visitor-reg-form" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate">
 <p><label> Your name<br>
-<span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text" name="your-name" fdprocessedid="gyt4q"></span> </label>
+<span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" type="text" name="your-name"></span> </label>
 </p>
 <p><label> Your email<br>
-<span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email" fdprocessedid="1h6sq"></span> </label>
+<span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autocomplete="email" aria-required="true" type="email" name="your-email"></span> </label>
 </p>
 <p><label> Contact Number<br>
-<span class="wpcf7-form-control-wrap" data-name="your-contact-number"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="contact-number" aria-required="true" aria-invalid="false" value="" type="text" name="your-contact-number" fdprocessedid="1xirt"></span> </label>
+<span class="wpcf7-form-control-wrap" data-name="your-contact-number"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="tel" aria-required="true" type="text" name="your-contact-number"></span> </label>
 </p>
 <p><label> Your Company<br>
-<span class="wpcf7-form-control-wrap" data-name="company-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="company-name" fdprocessedid="elbjx"></span> </label>
+<span class="wpcf7-form-control-wrap" data-name="company-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" type="text" name="company-name"></span> </label>
 </p>
 <p><label> Your message (optional)<br>
-<span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea></span> </label>
+<span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" name="your-message"></textarea></span> </label>
 </p>
-<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Submit" fdprocessedid="l6praf"><span class="wpcf7-spinner"></span>
-</p><div class="wpcf7-response-output" aria-hidden="true"></div>
-<input type="hidden" name="vx_width" value="1280"><input type="hidden" name="vx_height" value="720"><input type="hidden" name="vx_url" value="https://engitechexpo.com/visitors/"></form>
+<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Submit"></p>
+</form>
 </div>
 				</div>
 				</div>
@@ -222,6 +261,16 @@ and technologies. 								</div>
 				</div>
 					</div>
 				</div>` }} />
+      {formMessage && (
+        <div style={{
+          position: 'fixed', bottom: '2rem', left: '50%', transform: 'translateX(-50%)',
+          background: formStatus === 'success' ? '#16a34a' : '#dc2626',
+          color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '0.5rem',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)', zIndex: 9999, fontSize: '0.95rem'
+        }}>
+          {formMessage}
+        </div>
+      )}
     </Layout>
   );
 }
