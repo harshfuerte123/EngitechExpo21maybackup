@@ -65,19 +65,8 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /api/blogs/:slug — single blog by slug (public)
-router.get('/:slug', async (req, res) => {
-  try {
-    const blog = await Blog.findOne({ slug: req.params.slug, status: 'published' });
-    if (!blog) return res.status(404).json({ success: false, message: 'Blog not found' });
-    res.json({ success: true, blog });
-  } catch (err) {
-    res.status(500).json({ success: false, message: 'Server error' });
-  }
-});
-
 // ─────────────────────────────────────────────────────────
-// ADMIN ROUTES (protected)
+// ADMIN ROUTES (protected) — must come before /:slug wildcard
 // ─────────────────────────────────────────────────────────
 
 // GET /api/admin/blogs — admin listing
@@ -211,6 +200,21 @@ router.get('/admin/stats', auth, async (req, res) => {
     const recent = await Blog.find().sort({ createdAt: -1 }).limit(5)
       .select('title slug status publishDate createdAt');
     res.json({ success: true, stats: { total, published, draft }, recent });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
+
+// ─────────────────────────────────────────────────────────
+// PUBLIC /:slug — must be LAST to avoid swallowing admin paths
+// ─────────────────────────────────────────────────────────
+
+// GET /api/blogs/:slug — single blog by slug (public)
+router.get('/:slug', async (req, res) => {
+  try {
+    const blog = await Blog.findOne({ slug: req.params.slug, status: 'published' });
+    if (!blog) return res.status(404).json({ success: false, message: 'Blog not found' });
+    res.json({ success: true, blog });
   } catch (err) {
     res.status(500).json({ success: false, message: 'Server error' });
   }
