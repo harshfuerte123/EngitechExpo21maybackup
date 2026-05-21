@@ -1,0 +1,54 @@
+.rs-post-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.rs-post-navigation ul li {
+  margin-right: 10px;
+}
+.rs-post-navigation ul li a {
+  background: #EA5501;
+  color: #fff;
+  padding: 9px 22px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.rs-post-navigation ul li a span {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+.rs-post-navigation ul li a span svg {
+  position: relative;
+  margin-right: 10px;
+  top: -2px;
+}
+.rs-post-navigation ul li a span svg path {
+  fill: #fff;
+}
+.rs-post-navigation ul li.next {
+  margin-right: 0;
+}
+.rs-post-navigation ul li.next a {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  flex-direction: column;
+}
+.rs-post-navigation ul li.next a svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 0;
+  margin-left: 10px;
+  transition: all 0.3s linear;
+}
+.rs-post-navigation ul li.prev a svg {
+  width: 14px;
+  height: 14px;
+  transition: all 0.3s linear;
+}

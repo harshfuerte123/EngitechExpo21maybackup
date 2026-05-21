@@ -1,0 +1,82 @@
+.rs-offcanvas-area a.nav-expander {
+  background: transparent;
+  color: #FFFFFF;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
+  margin-right: 0;
+  padding: 0;
+  right: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: 0;
+  transition: right 0.3s ease-in-out 0s;
+  width: auto;
+  z-index: 12;
+  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+}
+.rs-offcanvas-area ul {
+  margin: 0;
+  padding: 0;
+}
+.rs-offcanvas-area ul .nav-link {
+  cursor: pointer;
+  padding: 0;
+  line-height: 16px;
+}
+.rs-offcanvas-area nav.right_menu_togle {
+  background: #ffffff;
+  display: block;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 100%;
+  max-width: 400px;
+  z-index: 999999;
+  transition: right 0.3s ease-in-out 0s;
+  -webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;
+  padding: 40px;
+}
+.rs-offcanvas-area .nav-expander i {
+  font-size: 24px;
+  color: #002336;
+}
+
+body .rsoffwrap {
+  cursor: url(close.png), auto;
+  width: 100%;
+  left: 100%;
+  transition: all 0.8s ease-out 0s;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+  z-index: 99999;
+  background-color: #FFFFFF;
+}
+
+body.nav-expanded {
+  margin-left: 0em;
+  transition: right 0.4s ease-in-out 0s;
+  -webkit-transition: right 0.4s ease-in-out 0s;
+  -moz-transition: right 0.4s ease-in-out 0s;
+  -o-transition: right 0.4s ease-in-out 0s;
+}
+
+body.nav-expanded nav {
+  right: 0 !important;
+}
+
+body.nav-expanded .rsoffwrap {
+  left: 0%;
+  transition: all 0.8s ease-out 0s;
+}

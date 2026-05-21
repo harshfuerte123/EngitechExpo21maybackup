@@ -1,0 +1,29 @@
+.prelements-blog-grid .pre-blog-item .blog-inner-wrap {
+  position: relative;
+}
+.prelements-blog-grid .pre-blog-item.pre-blog-item-list .blog-inner-wrap {
+  margin-left: 0;
+  margin-right: 0;
+}
+.prelements-blog-grid .pre-blog-item.pre-blog-item-list .blog-inner-wrap .rs-list-image {
+  padding-left: 0;
+}
+.prelements-blog-grid .pre-blog-item .blg-btn-wrap a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.prelements-blog-grid .pre-blog-item .blg-btn-wrap a svg {
+  width: 20px;
+  height: 20px;
+}
+.prelements-blog-grid .pre-blog-item .blg-btn-wrap a svg path {
+  fill: #EA5501;
+  transition: all 0.3s ease 0s;
+}
+.prelements-blog-grid .pre-blog-item .blg-btn-wrap a i {
+  font-size: 20px;
+  color: #EA5501;
+  transition: all 0.3s ease 0s;
+}

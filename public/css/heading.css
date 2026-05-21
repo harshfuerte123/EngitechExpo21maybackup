@@ -1,0 +1,30 @@
+.prelements-heading .title-inner {
+  position: relative;
+}
+.prelements-heading .title-inner .title {
+  margin-top: 20px;
+}
+.prelements-heading .title-inner .title span {
+  color: #EA5501;
+  position: relative;
+  z-index: 2;
+}
+.prelements-heading .title-inner span.sub-text {
+  font-size: 16px;
+  line-height: 25px;
+  display: inline-block;
+  font-weight: 500;
+  color: #EA5501;
+  text-transform: uppercase;
+  font-family: "Space Grotesk", sans-serif;
+}
+.prelements-heading .title-inner span.sub-text img {
+  width: 24px;
+  height: 24px;
+  margin-right: -2px;
+}
+.prelements-heading .title-inner span.sub-text svg {
+  width: 13px;
+  height: 15px;
+  margin: 0 3px 2px 0;
+}

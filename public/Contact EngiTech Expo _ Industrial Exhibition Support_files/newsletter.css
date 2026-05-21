@@ -1,0 +1,189 @@
+.footer-subscribe-3 .subscribe-border {
+  display: inline-block;
+}
+
+.footer-subscribe-3 .subscribe-border:before {
+  position: absolute;
+  content: "";
+  right: 0;
+  border-radius: 6px;
+  transition: 0.5s;
+  z-index: -1;
+  border-style: dashed;
+  border-width: 2px 2px 2px 2px;
+  border-color: #f23232;
+  bottom: -7px;
+  left: 9px;
+  width: 98%;
+  height: 100%;
+  z-index: 0;
+  opacity: 1;
+}
+
+.footer-subscribe-3 .subscribe-border:hover:before {
+  transform: translate3d(-8px, -8px, 0);
+  opacity: 0;
+}
+
+.rs-newsletter-form input[type=submit]:hover {
+  opacity: 1;
+}
+
+.rs-newsletter-form.right-arrow .mc4wp-form-fields p span:before {
+  transition: all 0.3s ease 0s;
+}
+
+.rs-newsletter-form.right-arrow .mc4wp-form-fields p span:after {
+  transition: all 0.3s ease 0s;
+}
+
+.rs-newsletter-form.right-arrow .mc4wp-form-fields p span:hover:before {
+  left: 135px;
+}
+
+.rs-newsletter-form.right-arrow .mc4wp-form-fields p span:hover:after {
+  left: 128px;
+}
+
+.rs-newsletter-form {
+  position: relative;
+}
+.rs-newsletter-form label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.rs-newsletter-form .form-inner {
+  position: relative;
+}
+.rs-newsletter-form .form-inner input {
+  border-radius: 10px;
+  height: 100%;
+}
+.rs-newsletter-form .form-inner input[type=email] {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 16px;
+  line-height: 26px;
+  border: 1px solid rgba(62, 62, 62, 0.6);
+}
+.rs-newsletter-form .form-inner .submit_nl {
+  z-index: 1;
+  padding: 10px 17px;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.rs-newsletter-form.right-arrow .mc4wp-form-fields p {
+  position: relative;
+}
+.rs-newsletter-form.right-arrow .mc4wp-form-fields p span {
+  transition: all 0.3s ease 0s;
+}
+.rs-newsletter-form img {
+  display: none;
+}
+
+.subscribe_btn i {
+  top: 2px;
+  left: -48px;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.subscribe_btn:hover i {
+  left: -43px;
+}
+
+.rs_newsletterstyle2 .mc4wp-form-fields {
+  position: relative;
+}
+.rs_newsletterstyle2 .mc4wp-form-fields input[type=email] {
+  width: 100%;
+  margin: 0;
+}
+.rs_newsletterstyle2 .mc4wp-form-fields em code.news-icon-btn2,
+.rs_newsletterstyle2 .mc4wp-form-fields em code.news-icon-btn1 {
+  width: 19px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 30px;
+  right: 38px;
+  z-index: 1;
+  line-height: 12px;
+  background: none;
+  pointer-events: none;
+}
+.rs_newsletterstyle2 .mc4wp-form-fields em img {
+  display: inline-block;
+  width: 1.4em;
+  pointer-events: none;
+  left: 0;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.rs_newsletterstyle1 .mc4wp-form-fields {
+  position: relative;
+}
+.rs_newsletterstyle1 .mc4wp-form-fields input[type=email] {
+  width: 100%;
+  margin: 0;
+}
+.rs_newsletterstyle1 .mc4wp-form-fields em {
+  position: relative;
+}
+.rs_newsletterstyle1 .mc4wp-form-fields em code.news-icon-btn2,
+.rs_newsletterstyle1 .mc4wp-form-fields em code.news-icon-btn1 {
+  width: 19px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 9px;
+  right: 38px;
+  z-index: 1;
+  line-height: 12px;
+  background: none;
+  pointer-events: none;
+}
+.rs_newsletterstyle1 .mc4wp-form-fields em img {
+  display: inline-block;
+  width: 1.4em;
+  pointer-events: none;
+  left: 0;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.rs_newsletterstyle1 .mc4wp-form-fields em code.news-icon-btn2 img {
+  transform: translateX(-30px);
+}
+
+.rs_newsletterstyle1 .mc4wp-form-fields em:hover code.news-icon-btn1 img {
+  transform: translateX(30px);
+}
+
+.rs_newsletterstyle1 .mc4wp-form-fields em:hover code.news-icon-btn2 img {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.rs_newsletterstyle2 .mc4wp-form-fields em code.news-icon-btn2 img {
+  transform: translateX(-30px);
+}
+
+.rs_newsletterstyle2 .mc4wp-form-fields em:hover code.news-icon-btn1 img {
+  transform: translateX(30px);
+}
+
+.rs_newsletterstyle2 .mc4wp-form-fields em:hover code.news-icon-btn2 img {
+  transform: translateX(0px);
+  opacity: 1;
+}

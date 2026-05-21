@@ -1,0 +1,36 @@
+.rs-brochures .brochures-content .brochure-title {
+  margin-bottom: 16px;
+}
+.rs-brochures .brochures-content .desc {
+  margin-bottom: 20px;
+}
+.rs-brochures .brochures-content ul {
+  list-style: none;
+  margin: 0;
+}
+.rs-brochures .brochures-content ul li {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 7px;
+  display: block;
+}
+.rs-brochures .brochures-content ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+.rs-brochures .brochures-content ul li a .brochures-left {
+  display: flex;
+  align-items: center;
+}
+.rs-brochures .brochures-content ul li a .brochures-left .list-brochures-img img {
+  width: 30px;
+  margin-right: 12px;
+}
+.rs-brochures .brochures-content ul li a .brochures-left .list-brochures-img i {
+  margin-right: 10px;
+  color: #2b59ff;
+  margin-top: 4px;
+}
+.rs-brochures .brochures-content ul li a .brochures-right img {
+  width: 22px;
+}

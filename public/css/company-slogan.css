@@ -1,0 +1,66 @@
+.rs-company-slogan {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #EA5501;
+  border-radius: 50%;
+  padding: 2px;
+}
+.rs-company-slogan .slogan-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  background: #D2C007;
+  border-radius: 50%;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+}
+.rs-company-slogan .slogan-logo img {
+  width: auto;
+  height: 100%;
+}
+.rs-company-slogan .text-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.rs-company-slogan .text-wrapper span {
+  position: absolute;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.rs-company-slogan.text-anim-yes .text-wrapper {
+  animation: slogan-text-anim 30s infinite linear;
+}
+.rs-company-slogan.image-anim-yes .slogan-logo img {
+  animation: slogan-image-anim 1s infinite alternate;
+}
+@keyframes slogan-text-anim {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes slogan-image-anim {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+  }
+}

@@ -1,0 +1,22 @@
+.rs-marquee-slider-gsap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-align: center;
+}
+.rs-marquee-slider-gsap .gsap-marquee .marquee-wrapper {
+  min-width: max-content;
+}
+.rs-marquee-slider-gsap .gsap-marquee .marquee-wrapper .slider-item:not(.image) {
+  font-size: 100px;
+  line-height: 1;
+  color: #1F1F1F;
+  font-weight: 700;
+}
+.rs-marquee-slider-gsap .gsap-marquee .marquee-wrapper .slider-item.image img {
+  height: 80px;
+  width: auto;
+  margin: 0 50px;
+}

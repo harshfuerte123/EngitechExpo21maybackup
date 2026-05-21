@@ -1,0 +1,153 @@
+/* ─────────────────────────────────────────────────────────
+ * LOGIN PAGE
+ * ───────────────────────────────────────────────────────── */
+.adm-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.adm-login__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.adm-login__particle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: adm-float 10s ease-in-out infinite;
+}
+
+.adm-login__particle--1 {
+  width: 400px;
+  height: 400px;
+  background: var(--adm-primary);
+  top: -100px;
+  left: -100px;
+}
+
+.adm-login__particle--2 {
+  width: 300px;
+  height: 300px;
+  background: #3b82f6;
+  bottom: -50px;
+  right: -50px;
+  animation-delay: -3s;
+}
+
+.adm-login__particle--3 {
+  width: 200px;
+  height: 200px;
+  background: #8b5cf6;
+  top: 40%;
+  left: 60%;
+  animation-delay: -6s;
+}
+
+@keyframes adm-float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
+}
+
+.adm-login__card {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.adm-login__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.adm-login__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--adm-sidebar-bg);
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.adm-login__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--adm-text-main);
+}
+
+.adm-login__subtitle {
+  margin: 8px 0 0;
+  color: var(--adm-text-muted);
+  font-size: 14px;
+}
+
+.adm-login__form .adm-label {
+  color: var(--adm-text-main);
+  font-weight: 600;
+}
+
+.adm-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.adm-input-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--adm-text-muted);
+}
+
+.adm-input--icon {
+  padding-left: 36px;
+}
+
+.adm-input--with-toggle {
+  padding-right: 40px;
+}
+
+.adm-input-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--adm-text-muted);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+.adm-input-toggle:hover {
+  color: var(--adm-text-main);
+}
+
+.adm-login__hint {
+  margin-top: 24px;
+  padding: 12px;
+  background: var(--adm-bg);
+  border-radius: var(--adm-radius);
+  font-size: 13px;
+  color: var(--adm-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}

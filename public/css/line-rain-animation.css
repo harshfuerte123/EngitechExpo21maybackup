@@ -1,0 +1,83 @@
+.elementor-widget.elementor-widget-rs-rain-animates {
+  position: static;
+  margin: 0px !important;
+}
+
+.rs-rain-animate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 1152px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.rs-rain-animate .line {
+  position: relative;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  background: #E4E4E4;
+  z-index: 1;
+}
+.rs-rain-animate .line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 106px;
+  width: 1px;
+  top: -20%;
+  left: 0px;
+  background-image: radial-gradient(#3B37FD 0%, #E4E4E4 60%);
+  -webkit-animation: rain-line 13s 0s linear infinite;
+  animation: rain-line 13s 0s linear infinite;
+}
+.rs-rain-animate .line:nth-child(2):after {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.rs-rain-animate .line:nth-child(3):after {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.rs-rain-animate .line:nth-child(4):after {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+.rs-rain-animate .line:nth-child(5):after {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+@media only screen and (max-width: 1024px) {
+  .rs-rain-animate .line:nth-child(5) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .rs-rain-animate .line:nth-child(4) {
+    display: none;
+  }
+}
+
+/* Rain Line Animation */
+@keyframes rain-line {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes rain-line {
+  0% {
+    top: -20%;
+  }
+  100% {
+    top: 100%;
+  }
+}

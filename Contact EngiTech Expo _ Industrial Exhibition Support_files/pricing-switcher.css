@@ -1,0 +1,450 @@
+.rs-pricing-switcher {
+  position: relative;
+}
+.rs-pricing-switcher .switcher-part {
+  margin-bottom: 50px !important;
+}
+.rs-pricing-switcher .switcher-part .pricing-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.rs-pricing-switcher .switcher-part .pricing-switcher-wrapper span {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+  text-align: center;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part {
+  text-align: center;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper {
+  gap: 20px;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper span:not(.switcher) {
+  padding: 0 !important;
+  z-index: 1;
+  position: relative;
+  color: #1F1F1F;
+  opacity: 1;
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper span.switcher {
+  width: 50px;
+  height: 30px;
+  background: #EA5501;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: inset 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
+}
+.rs-pricing-switcher.switcher-button-style1 .switcher-part .pricing-switcher-wrapper span.switcher:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s;
+}
+.rs-pricing-switcher.switcher-button-style1.switched .switcher-part .pricing-switcher-wrapper span.btn-monthly {
+  opacity: 0.6;
+}
+.rs-pricing-switcher.switcher-button-style1.switched .switcher-part .pricing-switcher-wrapper span.switcher:after {
+  left: calc(100% - 27px);
+}
+.rs-pricing-switcher.switcher-button-style1:not(.switched) .switcher-part .pricing-switcher-wrapper span.btn-yearly {
+  opacity: 0.6;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part {
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #d2d2d2;
+  padding: 8px;
+  border-radius: 43px;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper {
+  border-radius: inherit;
+  width: 100%;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span {
+  border-radius: inherit;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span:not(.switcher) {
+  padding: 6px 10px;
+  z-index: 1;
+  position: relative;
+  width: 50%;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span.btn-yearly {
+  color: #616161;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span.btn-monthly {
+  color: white;
+}
+.rs-pricing-switcher.switcher-button-style2 .switcher-part .pricing-switcher-wrapper span.switcher {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 50%;
+  background: #EA5501;
+  transition: all 0.3s ease 0s;
+}
+.rs-pricing-switcher.switcher-button-style2.switched .switcher-part .pricing-switcher-wrapper span.switcher {
+  left: 50%;
+}
+.rs-pricing-switcher.switcher-button-style2.switched .switcher-part .pricing-switcher-wrapper span.btn-monthly {
+  color: #616161;
+}
+.rs-pricing-switcher.switcher-button-style2.switched .switcher-part .pricing-switcher-wrapper span.btn-yearly {
+  color: white;
+}
+.rs-pricing-switcher .pricing-item {
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.rs-pricing-switcher .pricing-item.yearly {
+  display: none;
+}
+.rs-pricing-switcher.switched .pricing-item.monthly {
+  display: none;
+}
+.rs-pricing-switcher.switched .pricing-item.yearly {
+  display: block;
+}
+.rs-pricing-switcher.switching .pricing-item {
+  opacity: 0;
+}
+.rs-pricing-switcher.style-1 .pricing-item {
+  background: #f7f7f7;
+  border-radius: 4px;
+  text-align: center;
+  border-top: 3px solid #EA5501;
+  padding: 30px 0 50px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .title-wrapper {
+  padding: 0 45px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .title-wrapper .title {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  line-height: 40px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .title-wrapper .intro-txt {
+  font-size: 16px;
+  line-height: 26px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .price-wrapper {
+  padding: 22px 45px 14px;
+  border-top: 1px solid rgba(217, 213, 213, 0.5);
+  margin: 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .price-wrapper .price {
+  color: #EA5501;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 60px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .price-wrapper .plan-duration {
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 500;
+}
+.rs-pricing-switcher.style-1 .pricing-item .description {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 45px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature {
+  text-align: left;
+  padding: 32px 45px 0;
+  width: 100%;
+  border-top: 1px solid rgba(217, 213, 213, 0.5);
+  margin: 30px 0 40px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature .feature-title {
+  position: relative;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li {
+  position: relative;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #1F1F1F;
+  padding-right: 36px;
+  margin: 13px 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li:before {
+  content: "\eb7b";
+  color: #EA5501;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+  display: inline-block;
+  font-family: remixicon;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li.close {
+  color: #616161;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li.close:before {
+  color: inherit;
+  content: "\eb99";
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li:first-child {
+  margin-top: 0 !important;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-feature ul li:last-child {
+  margin-bottom: 0 !important;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn {
+  padding: 0 45px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  background: transparent;
+  border-radius: 4px;
+  color: #616161;
+  border: 2px solid rgba(31, 31, 31, 0.1);
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a > * {
+  flex-shrink: 0;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a svg {
+  width: 18px;
+  height: 18px;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a svg path {
+  fill: #616161;
+  transition: all 0.3s ease 0s;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a i {
+  font-size: 18px;
+  color: #616161;
+  transition: all 0.3s ease 0s;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a:hover {
+  background: #EA5501;
+  border-color: #EA5501;
+  color: #fff;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a:hover svg path {
+  fill: #fff;
+}
+.rs-pricing-switcher.style-1 .pricing-item .pricing-btn a:hover i {
+  color: #fff;
+}
+.rs-pricing-switcher.style-1 .pricing-item.item-active {
+  background: #faf5f5;
+}
+.rs-pricing-switcher.style-1 .pricing-item.item-active .pricing-btn a {
+  background: #EA5501;
+  border-color: #EA5501;
+  color: #fff;
+}
+.rs-pricing-switcher.style-1 .pricing-item.item-active .pricing-btn a:hover {
+  background: #fe6007;
+  border-color: #fe6007;
+}
+.rs-pricing-switcher.style-1 .pricing-item.item-active .pricing-btn a svg path {
+  fill: #fff;
+}
+.rs-pricing-switcher.style-1 .pricing-item.item-active .pricing-btn a i {
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item {
+  background: #f7f7f7;
+  padding: 60px;
+  border-radius: 20px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-item-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-item-inner .content-side {
+  position: relative;
+  width: 100%;
+  max-width: 30%;
+}
+.rs-pricing-switcher.style-2 .pricing-item .title-wrapper .title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  line-height: 34px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .title-wrapper .intro-txt {
+  font-size: 16px;
+  line-height: 26px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 5px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-wrapper .price {
+  color: #EA5501;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 40px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .price-wrapper .plan-duration {
+  font-size: 17px;
+  line-height: 27px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .description {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 20px 0 40px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature {
+  text-align: left;
+  width: 100%;
+  max-width: 58%;
+  padding: 50px 60px 38px;
+  background: #fff;
+  border-radius: 20px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature .feature-title {
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+  line-height: 30px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li {
+  position: relative;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 600;
+  width: calc(50% - 25px);
+  color: #1F1F1F;
+  padding-right: 36px;
+  margin: 13px 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li:before {
+  content: "\eb81";
+  color: #EA5501;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 400;
+  display: inline-block;
+  font-family: remixicon;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li.close {
+  color: #616161;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-feature ul li.close:before {
+  color: inherit;
+  content: "\eb97";
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  background: #1F1F1F;
+  border-radius: 4px;
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a > * {
+  flex-shrink: 0;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a svg {
+  width: 18px;
+  height: 18px;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a svg path {
+  fill: #fff;
+  transition: all 0.3s ease 0s;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a i {
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a:hover {
+  background: #EA5501;
+  border-color: #EA5501;
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a:hover svg path {
+  fill: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item .pricing-btn a:hover i {
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature {
+  background: #EA5501;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li {
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li:before {
+  color: inherit;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li.close {
+  color: rgba(255, 255, 255, 0.8);
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-feature ul li.close:before {
+  color: inherit;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-btn a {
+  background: #EA5501;
+  border-color: #EA5501;
+  color: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-btn a:hover {
+  background: #fe6007;
+  border-color: #fe6007;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-btn a svg path {
+  fill: #fff;
+}
+.rs-pricing-switcher.style-2 .pricing-item.item-active .pricing-btn a i {
+  color: #fff;
+}

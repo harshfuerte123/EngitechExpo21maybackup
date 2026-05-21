@@ -1,0 +1,229 @@
+.hero-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 600px;
+}
+
+@media (min-width: 992px) {
+  .hero-swiper {
+    height: 700px;
+  }
+}
+
+.hero-slide-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Light overlay for contrast */
+  z-index: 1;
+}
+
+.hero-slide-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-edition-box {
+  display: inline-block;
+  background: rgba(38, 77, 103, 0.95);
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+  .hero-edition-box {
+    font-size: 32px;
+    padding: 12px 30px;
+  }
+}
+
+.hero-main-title {
+  background: rgba(0, 0, 0, 0.65);
+  display: inline-block;
+  padding: 30px 40px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hero-date {
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.hero-location {
+  color: #ffc107; /* Yellow */
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .hero-date, .hero-location {
+    font-size: 52px;
+  }
+}
+
+.hero-info-box {
+  display: inline-block;
+  background: rgba(38, 77, 103, 0.95);
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .hero-info-box {
+    font-size: 18px;
+  }
+}
+
+.hero-btn-wrap {
+  display: block;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffc107;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.hero-btn:hover {
+  background: #e0a800;
+  color: #000;
+}
+
+/* Controls */
+.hero-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.hero-nav-buttons {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  gap: 2px;
+  pointer-events: auto;
+}
+
+.hero-prev, .hero-next {
+  width: 50px;
+  height: 50px;
+  background: #222;
+  border: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-prev:hover, .hero-next:hover {
+  background: #ffc107;
+  color: #000;
+}
+
+.hero-pagination {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+/* Swiper Pagination Overrides */
+.hero-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  opacity: 1;
+  margin: 0 !important;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* Animation on active slide */
+.hero-swiper .swiper-slide-active .hero-edition-box {
+  animation: slideDown 0.8s ease backwards;
+}
+.hero-swiper .swiper-slide-active .hero-main-title {
+  animation: slideRight 1s ease 0.3s backwards;
+}
+.hero-swiper .swiper-slide-active .hero-info-box {
+  animation: slideUp 0.8s ease 0.6s backwards;
+}
+.hero-swiper .swiper-slide-active .hero-btn {
+  animation: zoomIn 0.8s ease 0.9s backwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

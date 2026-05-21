@@ -1,0 +1,63 @@
+.counter-top-area {
+  position: relative;
+  padding: 0;
+}
+.counter-top-area .odometer {
+  text-align: left;
+}
+.counter-top-area .odometer.odometer-auto-theme {
+  font-family: inherit;
+}
+.counter-top-area .odometer .odometer-value {
+  display: block !important;
+}
+.counter-top-area .odometer .odometer-inside * {
+  text-align: inherit !important;
+}
+.counter-top-area .rs-counter-list .counter-icon {
+  display: inline-block;
+}
+.counter-top-area .rs-counter-list .counter-icon i {
+  font-size: 50px;
+  color: #dcdcdc;
+  line-height: 60px;
+  transition: all 0.3s ease 0s;
+}
+.counter-top-area .rs-counter-list .counter-icon svg {
+  width: 50px;
+  height: 50px;
+}
+.counter-top-area .rs-counter-list .count-text .count-number {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f00;
+}
+.counter-top-area .rs-counter-list .count-text .count-number .rs-counter {
+  font-size: 50px;
+  color: #616161;
+  line-height: 60px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.counter-top-area .rs-counter-list .count-text .count-number .prefix {
+  font-size: 20px;
+  color: #000;
+}
+.counter-top-area .rs-counter-list .count-text .count-number .sufix {
+  font-size: 100px;
+  color: #000;
+}
+.counter-top-area .rs-counter-list .count-text .title {
+  font-size: 18px;
+  color: #000;
+  color: #1F1F1F;
+  line-height: 18px;
+  transition: all 0.3s ease 0s;
+  display: block;
+}
+
+@media screen and (max-width: 990px) {
+  .counter {
+    margin-bottom: 40px;
+  }
+}

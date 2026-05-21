@@ -1,0 +1,104 @@
+.rs-service-list .services-inner {
+  padding: 40px 30px;
+  background-color: #f7f7f7;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+.rs-service-list .services-inner .feature_img {
+  position: absolute;
+  content: "";
+  right: 50px;
+  bottom: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease 0s;
+  z-index: 1;
+}
+.rs-service-list .services-inner .feature_img img {
+  width: 280px;
+  height: auto;
+}
+.rs-service-list .services-inner .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: all 0.3s ease 0s;
+  flex-shrink: 0;
+}
+.rs-service-list .services-inner .icon-wrap svg {
+  width: 60px;
+  height: 60px;
+}
+.rs-service-list .services-inner .icon-wrap svg path {
+  fill: #EA5501;
+  transition: all 0.3s ease 0s;
+}
+.rs-service-list .services-inner .icon-wrap i {
+  font-size: 60px;
+  color: #EA5501;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.rs-service-list .services-inner .icon-wrap i:after {
+  font-size: inherit;
+  line-height: inherit;
+}
+.rs-service-list .services-inner .title {
+  margin-bottom: 0px;
+  transition: all 0.3s ease 0s;
+}
+.rs-service-list .services-inner .desc-text {
+  transition: all 0.3s ease 0s;
+  color: #616161;
+}
+.rs-service-list .services-inner .btn-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: all 0.3s ease 0s;
+  flex-shrink: 0;
+}
+.rs-service-list .services-inner .btn-part svg {
+  width: 15px;
+  height: 15px;
+}
+.rs-service-list .services-inner .btn-part svg path {
+  fill: #EA5501;
+  transition: all 0.3s ease 0s;
+}
+.rs-service-list .services-inner .btn-part i {
+  font-size: 22px;
+  color: #EA5501;
+  line-height: 1;
+}
+.rs-service-list .services-inner .top-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rs-service-list .services-inner .bottom-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.rs-service-list .services-inner:last-child {
+  border-color: transparent;
+  margin-bottom: 0;
+}
+.rs-service-list .services-inner:hover .feature_img {
+  opacity: 1;
+}

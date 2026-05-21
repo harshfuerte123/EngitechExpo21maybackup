@@ -1,0 +1,36 @@
+.rs-client-list-content .rs-client-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+}
+.rs-client-list-content .rs-client-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e0e3;
+}
+.rs-client-list-content .rs-client-list li:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+.rs-client-list-content .rs-client-list li .list-client-title {
+  position: relative;
+  min-width: 100px;
+}
+.rs-client-list-content .rs-client-list li h3 {
+  margin: 0;
+  color: #1E001C;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+.rs-client-list-content .rs-client-list li .list-client-content p {
+  margin: 0;
+}
+.rs-client-list-content .rs-client-list li .list-client-content p span {
+  padding-right: 20px;
+}

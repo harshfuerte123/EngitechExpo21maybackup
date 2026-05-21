@@ -1,0 +1,15 @@
+.marquee_wrapper_logo .item-inner {
+  padding: 0 30px;
+}
+.marquee_wrapper_logo .item-inner .rs-marquee-image {
+  flex-shrink: 0;
+}
+.marquee_wrapper_logo .item-inner .rs-marquee-text {
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.marquee_wrapper_logo.stroke-enable .rs-marquee-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+  text-stroke: 2px #000;
+}

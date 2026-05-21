@@ -1,0 +1,56 @@
+.rs-iconbox-area .box-inner {
+  position: relative;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.rs-iconbox-area .box-inner .icon-area {
+  display: inline-block;
+  color: #010d14;
+  transition: all ease 0.3s;
+}
+.rs-iconbox-area .box-inner .icon-area svg {
+  width: 10px;
+  height: 10px;
+}
+.rs-iconbox-area .box-inner .icon-area i {
+  transition: all ease 0.3s;
+  font-size: 30px;
+}
+.rs-iconbox-area .box-inner .icon-area img {
+  transform: scale(1.05);
+}
+.rs-iconbox-area .box-inner .icon-area.clip-path-enable {
+  clip-path: polygon(0% 0%, 78% 0, 100% 18%, 100% 100%, 0% 100%) !important;
+}
+.rs-iconbox-area .box-inner .text-area {
+  position: relative;
+}
+.rs-iconbox-area .box-inner .text-area .iconbox-title {
+  position: relative;
+}
+.rs-iconbox-area .box-inner .text-area .iconbox-title .title {
+  font-size: 20px;
+  margin: 0;
+  color: #121933;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.rs-iconbox-area .box-inner .text-area .iconbox-title .title a {
+  color: #121933;
+}
+.rs-iconbox-area .box-inner .text-area .iconbox-title .title a:hover {
+  color: #1273eb;
+}
+.rs-iconbox-area .box-inner .text-area p {
+  font-size: 20px;
+  margin: 0;
+  color: #121933;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.rs-iconbox-area .box-inner .text-area p a {
+  margin: 0;
+}
+.rs-iconbox-area .box-inner .text-area p a:hover {
+  color: #f00;
+}

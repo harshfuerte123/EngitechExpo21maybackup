@@ -1,0 +1,63 @@
+.rs-social-menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.rs-social-menu ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+.rs-social-menu ul li i {
+  font-size: 16px;
+  line-height: 40px;
+  transition: all 0.3s ease 0s;
+  color: #000;
+}
+.rs-social-menu ul li i:hover {
+  color: #fff;
+}
+.rs-social-menu ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+.rs-social-menu ul li a svg {
+  width: 18px;
+  height: 18px;
+}
+.rs-social-menu ul li a svg path {
+  transition: all 0.3s ease 0s;
+}
+.rs-social-menu ul li a:hover {
+  transform: translate(0, -10%);
+  border-color: #EA5501;
+  background: #EA5501;
+}
+
+.rs-social-menu.style2 ul li a {
+  position: relative;
+  display: inline-block;
+}
+.rs-social-menu.style2 ul li a:hover {
+  transform: translate(0, 0);
+}
+.rs-social-menu.style2 ul li a span {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  top: 5px;
+  right: 130%;
+}
+.rs-social-menu.style2 ul li a:hover span {
+  color: #05100B;
+  visibility: visible;
+}

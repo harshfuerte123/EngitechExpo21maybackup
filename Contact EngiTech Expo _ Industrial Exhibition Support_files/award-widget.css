@@ -1,0 +1,61 @@
+.rs-award-wrapper {
+  background-color: #F7F7F7;
+}
+.rs-award-wrapper .award-inner {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  position: relative;
+}
+.rs-award-wrapper .award-inner .year {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+}
+.rs-award-wrapper .award-inner .year .top-area {
+  margin: 0 0 5px 0;
+  text-align: right;
+}
+.rs-award-wrapper .award-inner .year .top-area div {
+  text-align: center;
+}
+.rs-award-wrapper .award-inner .year .top-area span {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #e8eced;
+  display: block;
+}
+.rs-award-wrapper .award-inner .award-middle-part img {
+  width: 80px;
+  height: auto;
+}
+.rs-award-wrapper .award-inner .award-middle-part .logo-title {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.rs-award-wrapper .award-inner .bottom-part .title {
+  margin: 75px 0 0 0;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.rs-award-wrapper .award-inner:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  width: 0;
+  background-color: #023B4A;
+  transition: all 0.3s ease;
+}
+.rs-award-wrapper .award-inner:hover:after {
+  width: 100%;
+}
